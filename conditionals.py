@@ -1,102 +1,138 @@
-# Se va a crear un validador para saber si podemos o no podemos entrar a una fiesta, es importante agregar que para entrar a la fiesta debe ser mayor de edad
-# Se crea la variable edad y en ella se va a guardar lo que escriba el usuario
+# ============================== 🎉🛂 SECCIÓN 1: VALIDAR ENTRADA A LA FIESTA (SOLO EDAD) 🛂🎉 ==============================
+# 🎉🛂 Vamos a crear un validador para saber si una persona puede entrar a una fiesta.
+# ✅ Requisito: para entrar, debe ser mayor de edad (18 años o más).
+
+# 🧾👤 Se crea la variable edad y en ella se guarda lo que escriba el usuario.
+# 🧠📌 input() muestra un mensaje y espera a que el usuario escriba algo en la consola.
+# ✅ Lo que se escribe se guarda como texto (str), aunque parezca un número.
 edad = input("Escriba su edad: ")
 
-# Convertimos la variable entrada a entero debido a que cuando se escribe por consola el valor que se guarda es el de un texto (str)
+# ============================== 🔄🔢 SECCIÓN 2: CONVERTIR LA EDAD A NÚMERO 🔢🔄 ==============================
+# 🔁🔢 Convertimos la edad a número entero.
+# 🧠📌 Esto es necesario porque para comparar edades (mayor, menor, igual) se deben usar números.
 edad = int(edad)
 
-# Vamos a comparar si la edad es mayor o igual a 18 años
-if edad >= 18 :
-    # Imprime que lo deja entrar
+# ============================== ✅🔍 SECCIÓN 3: DECIDIR SI PUEDE ENTRAR (IF / ELSE) 🔍✅ ==============================
+# ✅🔍 Comparamos si la edad es mayor o igual a 18.
+# 🧠📌 Si cumple, entra. Si no cumple, no entra.
+if edad >= 18:
+    # ✅🟢 Si es mayor de edad, se le permite entrar.
     print("Puede entrar")
 else:
-    # Si no se cumple la condicion de ser mayor de 18 años, imprime "no puede entrar"
+    # ⛔🔴 Si es menor de edad, no se le permite entrar.
     print("No puede entrar")
-    
-#----------------------------------------------------------------------------------
 
-# Ahora se va a validar si la persona es mayor de edad y ademas tiene mas de $600
-# Se crea la variable edad y en ella se guarda lo que escriba el usuario
+
+# ============================== 🎉💵 SECCIÓN 4: VALIDAR ENTRADA A LA FIESTA (EDAD + DINERO) 💵🎉 ==============================
+# 🎉💵 Ahora validamos DOS condiciones:
+# ✅ Debe tener 18 años o más
+# ✅ Y además debe tener 600 o más (dinero suficiente)
+
+# 🧾👤 Volvemos a pedir la edad.
+# 🧠📌 De nuevo, lo que se escribe se guarda como texto al principio.
 edad = input("Escriba su edad: ")
 
-# Convertimos la variable entrada a entero debido a que cuando se escribe por consola el valor que se guarda es el de un texto (str)
+# 🔁🔢 Convertimos la edad a número entero para poder compararla.
 edad = int(edad)
 
-# Se crea la variable dinero y en ella se guarda lo que escriba el usuario
+# ============================== 💰🧾 SECCIÓN 5: PEDIR Y CONVERTIR EL DINERO 💰🧾 ==============================
+# 💰🧾 Se crea la variable dinero y se guarda lo que escriba el usuario.
+# 🧠📌 input() también devuelve texto, por eso luego debemos convertirlo.
 dinero = input("Escriba su dinero: ")
 
-# Convertimos la variable dinero a entero debido a que cuando se escribe por consola el valor que se guarda es el de un texto (str)
+# 🔁🔢 Convertimos el dinero a entero para poder compararlo con 600.
 dinero = int(dinero)
 
-# Vamos a comparar si la edad es mayor o igual a 18 años
-if edad >= 18 :
-    # Verificamos si cuenta con el dinero
-    if dinero >= 600 :
-        # Imprime que lo deja entrar
+# ============================== ✅🔍 SECCIÓN 6: VALIDACIÓN CON IF ANIDADO (PASO A PASO) 🔍✅ ==============================
+# ✅🔍 Primero verificamos si cumple la edad.
+if edad >= 18:
+    # 💵✅ Si cumple la edad, verificamos si tiene suficiente dinero.
+    if dinero >= 600:
+        # ✅🟢 Cumple ambas condiciones: entra.
         print("Puede entrar")
-    else: 
-        # Como no tiene el dinero no puede entrar
+    else:
+        # ⛔💵 Cumple la edad, pero NO tiene suficiente dinero.
         print("No puede entrar")
 else:
-    # Como no tiene la edad no puede entrar 
+    # ⛔🔞 No cumple la edad, así tenga dinero, NO entra.
     print("No puede entrar")
-    
-# Vamos a comparar si la edad es mayor o igual a 18 años - Version 2
+
+
+# ============================== ✅🧩 SECCIÓN 7: VALIDACIÓN EN UNA SOLA LÍNEA (VERSIÓN 2) 🧩✅ ==============================
+# ✅🧩 Esta versión hace lo mismo, pero en una sola condición:
+# 🧠📌 “and” significa: ambas condiciones deben ser verdaderas al mismo tiempo.
 if edad >= 18 and dinero >= 600:
-    # Imprime que lo deja entrar
+    # ✅🟢 Si cumple edad Y dinero, entra.
     print("v2 Puede entrar")
 else:
-    # Como no tiene la edad no puede entrar 
+    # ⛔🚫 Si falla cualquiera (edad o dinero), no entra.
     print("v2 No puede entrar")
 
-#-----------------------------------------------------------------
-# Condicional con multiple comparaciones
-# Creamos la variable llamada dinero
+
+# ============================== 🧩🛍️ SECCIÓN 8: DECIDIR QUÉ COMPRAR SEGÚN EL DINERO 🛍️🧩 ==============================
+# 🧩🔍 Ahora haremos varias comparaciones para sugerir qué comprar.
+# 💰🧾 Pedimos el dinero otra vez (para este ejemplo de compras).
 dinero = input("Esccriba el dinero con el que cuenta: ")
 
-# Convertimos la variable de str a entero
+# 🔁🔢 Lo convertimos a número entero para comparar.
 dinero = int(dinero)
 
-if dinero < 100 :
+# 🧮🛍️ Comparamos el dinero con diferentes rangos para decidir qué comprar.
+if dinero < 100:
+    # 🍪🟢 Si tiene menos de 100, sugerimos algo económico.
     print("Le compro unas galletas")
-elif dinero >= 100 and dinero <= 200 :
-    print("Le compro unos chocolates")
-elif dinero > 200 and dinero <= 300 :
-    print("Le compro unas 300 picafresas")
-else:
-    print("Le compro un peluche")
-    
-#-----------------Laboratorio---------------------------
 
-# Creamos la variable userReply y en ella guardamos lo que escriba el usuario
+elif dinero >= 100 and dinero <= 200:
+    # 🍫🟡 Si tiene entre 100 y 200, sugerimos chocolates.
+    print("Le compro unos chocolates")
+
+elif dinero > 200 and dinero <= 300:
+    # 🍓🟠 Si tiene entre 201 y 300, sugerimos picafresas.
+    print("Le compro unas 300 picafresas")
+
+else:
+    # 🧸🔵 Si tiene más de 300, sugerimos algo más costoso.
+    print("Le compro un peluche")
+
+
+# ============================== 📦📮 SECCIÓN 9: SERVICIO DE ENVÍO (RESPUESTA SÍ / NO) 📮📦 ==============================
+# 📦❓ Guardamos en userReply lo que escriba el usuario.
+# 🧠📌 El usuario debe responder "yes" o "no".
 userReply = input("Do you need to ship a package? (Enter yes or no) ")
 
-# Si lo que hay dentro de la variable userReply es exactamente igual a "yes"
+# ✅🧾 Si escribió exactamente "yes", damos una respuesta positiva.
 if userReply == "yes":
-    # Imprime que nos peude ayudar
+    # 📦✅ Mensaje de ayuda.
     print("We can help you ship that package!")
-# De lo contrario dice que vuelva pronto
 else:
+    # 🙏👋 Si no escribió "yes", mostramos un mensaje de despedida amable.
     print("Please come back when you need to ship a package. Thank you.")
-    
-# En la variable userReply vamos a guardar una de estas opciones (stamps, envelope, or copy) que deben ser escritas en la consola. Si no se escribe ninguna de ellas se imprime un mensaje de despedida 
+
+
+# ============================== 🛒🧾 SECCIÓN 10: ELEGIR UN SERVICIO (STAMPS / ENVELOPE / COPY) 🧾🛒 ==============================
+# 🛒📮📄 El usuario debe escribir una opción:
+# stamps, envelope o copy
+# 🧠📌 Guardamos su respuesta en userReply.
 userReply = input("Would you like to buy stamps, buy an envelope, or make a copy? (Enter stamps, envelope, or copy) ")
 
-# Si la variable es exactamente igual a "stamps" imprime el mensaje con stamps
+# 🧾✅ Si eligió "stamps", mostramos opciones de sellos.
 if userReply == "stamps":
+    # 🟦📮 Mensaje sobre sellos.
     print("We have many stamp designs to choose from.")
-    
-# Si la variable es exactamente igual a "envelope" imprime el mensaje con envelope
+
+# ✉️✅ Si eligió "envelope", mostramos opciones de sobres.
 elif userReply == "envelope":
+    # ✉️📏 Mensaje sobre sobres.
     print("We have many envelope sizes to choose from.")
-    
-# Si la variable es exactamente igual a "copy" imprime el mensaje con copy
+
+# 🖨️✅ Si eligió "copy", pedimos cuántas copias quiere.
 elif userReply == "copy":
-    # Se crea la variable copies y se almacena el numero de copias que desea crear el usuario
+    # 🧾🔢 Pedimos el número de copias.
     copies = input("How many copies would you like? (Enter a number) ")
-    # Imprime el numero de copias
+
+    # 🖨️📄 Mostramos el resultado usando format() para insertar el número.
     print("Here are {} copies.".format(copies))
-    
+
 else:
-    # Se imprime mensaje de despedida
+    # 🙏👋 Si no eligió ninguna opción válida, despedimos al usuario.
     print("Thank you, please come again.")

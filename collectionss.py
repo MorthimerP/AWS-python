@@ -1,66 +1,92 @@
-# Para crear una lista se usan [] 
-# Creamos la lista myFruitList y dentro de ella guardamos las siguientes frutas "apple", "banana", "cherry"
+# ============================== 📋🍎 SECCIÓN 1: CREACIÓN DE UNA LISTA 🍎📋 ==============================
+# 🧾✅ Para crear una lista se usan corchetes []
+# 🍎🍌🍒 Creamos la lista myFruitList y dentro de ella guardamos las frutas "apple", "banana" y "cherry"
+# 🧠📌 Una lista es una estructura que permite guardar varios valores en una sola variable.
+# ✅ Cada elemento se separa con comas.
+# 📦 En este caso, guardamos nombres de frutas en formato texto (string).
 myFruitList = ["apple", "banana", "cherry"]
 
-# Imprimimos la lista de frutas completa
+# ============================== 🖨️📋 SECCIÓN 2: IMPRIMIR LA LISTA COMPLETA 📋🖨️ ==============================
+# 🧠📌 print() muestra en pantalla todo el contenido de la lista.
+# 👀 Esto nos permite verificar que la lista fue creada correctamente.
 print(myFruitList)
 
-# Imprimimos el tipo de dato que es myFruitList
+# ============================== 🔎🧠 SECCIÓN 3: VERIFICAR EL TIPO DE DATO 🔎🧠 ==============================
+# 🧾📌 type() nos dice qué tipo de dato es la variable.
+# ✅ Aquí confirmamos que myFruitList es una lista (list).
 print(type(myFruitList))
 
-# Imprimimos el valor que esta en la primera posicion de la lista myFruitList (este valor es "apple")
+# ============================== 🔢🍎 SECCIÓN 4: ACCEDER A ELEMENTOS POR POSICIÓN 🔢🍎 ==============================
+# 🧠📌 En Python las posiciones comienzan desde 0.
+# 0 = primer elemento, 1 = segundo elemento, 2 = tercer elemento.
+
+# 1️⃣🍎 Primer elemento
 print(myFruitList[0])
 
-# Imprimimos el valor que esta en la segunda posicion de la lista myFruitList (este valor es "banana")
+# 2️⃣🍌 Segundo elemento
 print(myFruitList[1])
 
-# Imprimimos el valor que esta en la tercera posicion de la lista myFruitList (este valor es "cherry")
+# 3️⃣🍒 Tercer elemento
 print(myFruitList[2])
 
-# Vamos a cambiar el valor de la lista en la posicion 2 que antes era "cherry" y ahora sera "orage"
+# ============================== 🔁✏️ SECCIÓN 5: MODIFICAR UN ELEMENTO DE LA LISTA ✏️🔁 ==============================
+# 🧠📌 Las listas son mutables, eso significa que se pueden modificar después de crearlas.
+# 🔄 Cambiamos el valor de la posición 2 (antes era "cherry") por "orange".
 myFruitList[2] = "orange"
 
-# Imprimimos la lista completa con el cambio
+# 🖨️📋 Imprimimos nuevamente la lista para verificar el cambio
 print(myFruitList)
 
-# Para crear una tupla se usan ()
-# Creamos la tupla llamada myFinalAnswerTuple() y dentro de ella guardamos las siguientes frutas "apple", "banana", "pineapple"
+# ============================== 📦🍍 SECCIÓN 6: CREACIÓN DE UNA TUPLA 🍍📦 ==============================
+# 🧾✅ Para crear una tupla se usan paréntesis ()
+# 🧠📌 Una tupla es parecida a una lista, pero NO se puede modificar después de crearla.
+# 🔒 Esto la hace inmutable (más segura si no queremos cambios).
 myFinalAnswerTuple = ("apple", "banana", "pineapple")
 
-# Imprimimos la tupla completa
+# 🖨️ Mostramos la tupla completa
 print(myFinalAnswerTuple)
 
-# Imprimimos el tipo de dato de myFinalAnswerTuple 
+# 🔎 Verificamos el tipo de dato
 print(type(myFinalAnswerTuple))
 
-# Imprimimos el primer valor de la tupla que es "apple"
+# ============================== 🔢🍎 SECCIÓN 7: ACCEDER A VALORES DE LA TUPLA 🔢🍎 ==============================
+# 🧠📌 Igual que en las listas, las posiciones comienzan desde 0.
+
+# 1️⃣🍎 Primer elemento
 print(myFinalAnswerTuple[0])
 
-# Imprimimos el segundo valor de la tupla que es "banana"
+# 2️⃣🍌 Segundo elemento
 print(myFinalAnswerTuple[1])
 
-# Imprimimos el tercer valor de la tupla que es "pineapple"
+# 3️⃣🍍 Tercer elemento
 print(myFinalAnswerTuple[2])
 
-# Para crear un diccionario se utilizan {} y dentro de ellas se va a crear una clave y un valor. La clave y el valor van separados por : y luego de cada clave:valor se separa del siguiente usando ,
-# Creamos el diccionario myFavoriteFruitDictionary con las siguientes claves "Akua", "Saanvi", "Paulo" y sus correspondientes valores "apple", "banana", "pineapple"
+# ============================== 📚🍎 SECCIÓN 8: CREACIÓN DE UN DICCIONARIO 🍎📚 ==============================
+# 🧾📌 Los diccionarios se crean con llaves {}
+# 🧠📌 Guardan información en formato clave : valor
+# 🔑 La clave sirve para identificar el dato.
+# 📦 El valor es la información asociada a esa clave.
 myFavoriteFruitDictionary = {
-  "Akua" : "apple",
-  "Saanvi" : "banana",
-  "Paulo" : "pineapple"
+    "Akua": "apple",
+    "Saanvi": "banana",
+    "Paulo": "pineapple"
 }
 
-# Imprimimos el diccionario completo 
+# ============================== 🖨️📚 SECCIÓN 9: IMPRIMIR EL DICCIONARIO COMPLETO 📚🖨️ ==============================
+# 👀 Mostramos todos los pares clave-valor.
 print(myFavoriteFruitDictionary)
 
-# Imprimimos el tipo de variable de myFavoriteFruitDictionary  
+# 🔎 Verificamos que sea un diccionario
 print(type(myFavoriteFruitDictionary))
 
-# Imprimimos el valor de la clave "Akua"
+# ============================== 🔑🍎 SECCIÓN 10: ACCEDER A VALORES USANDO LA CLAVE 🔑🍎 ==============================
+# 🧠📌 Para obtener un valor usamos: diccionario["clave"]
+
+# 🍎 Fruta favorita de Akua
 print(myFavoriteFruitDictionary["Akua"])
 
-# Imprimimos el valor de la clave "Saanvi"
+# 🍌 Fruta favorita de Saanvi
 print(myFavoriteFruitDictionary["Saanvi"])
 
-# Imprimimos el valor de la clave "Paulo"
+# 🍍 Fruta favorita de Paulo
 print(myFavoriteFruitDictionary["Paulo"])
